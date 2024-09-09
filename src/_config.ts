@@ -222,7 +222,7 @@ export const db_NOTION_log = process.env.NOTION_db_log || "";
 
 //======================黑白名单设置============================
 //黑名单模式 1-开 0-关
-export const blacklist_enabled: io = 1;
+export const blacklist_enabled: io = 0;
 //白名单模式 1-开 0-关
 export const whitelist_enabled: io = 0;
 //验证vip与视频要求 1-开 0-关
@@ -233,7 +233,7 @@ export const whitelist_vip_enabled: io = 0;
 
 //===================获取公共黑白名单============================
 //功能开关 1-开 0-关
-export const public_blacklist_enabled: io = 1;
+export const public_blacklist_enabled: io = 0;
 //公共黑名单地址 要求：URL后需可以直接加 UID/mid
 export const public_blacklist: string = "https://black.qimo.ink/api/users/";
 //============================================================
@@ -249,13 +249,13 @@ export const pass_web_on_check: io = 1;
 //限制哔哩漫游最低版本 填写数字 0-不限制
 //1289为1.7.0的版本号,默认限制会定期更新至最新版。
 //1290为目前最新测试版(CI)。
-export const ver_min: number = 1290;
+export const ver_min: number = 0;
 //限制播放特定番剧/视频
 //限制采用"或"策略，满足任意一项即封锁
 //默认屏蔽部分番剧/视频，建议保持
 export const block_bangumi: _block_bangumi = {
   ss: [], //暂不支持ss屏蔽
-  ep: [778998, 778292, 769927, 778044, 779739, 780016], //数字
+  ep: [], //数字
   cid: [], //数字
   avid: [], //数字
   bvid: [], //字符，eg. ["BV1Wz4y1t7g4"]
